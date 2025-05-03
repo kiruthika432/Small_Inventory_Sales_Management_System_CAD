@@ -28,3 +28,72 @@ Features and Workflow:
                  20, Add seasonal offers
                  21, Show graphs for sales, profit, loss, stocks moved etc
                  22, Collect feedback from users
+
+System Design:
+          1, Class StoreRegister:
+                  -   storeId: int
+                  - storeName: String
+                  - ownerName: String
+                  -     email: String
+                  -  password: String
+.
+          2, Class Login:
+                  -    email: String
+                  - password: String
+.
+          3, Class Product:
+                  -     productId: int
+                  -          name: String
+                  -         price: double
+                  -      category: String
+                  -    expiryDate: String
+                  - stockQuantity: int
+                  -       barcode: String
+                  -      discount: double
+.
+          4, Class Customer:
+                  - customerId: int
+                  -       name: String
+                  -      phone: String
+                  -      email: String
+                  -    address: String 
+.
+          5, Class InvoiceItem:
+                  -         product: Product ( class 3)
+                  -        quantity: int
+                  - discountApplied: double
+                  -      finalPrice: double
+.
+          6, Class Invoice:
+                  -   invoiceId: int
+                  -    customer: Customer (class 4)
+                  -       items: List<InvoiceItem>
+                  - totalAmount: double
+                  -   taxAmount: double
+                  - finalAmount: double
+                  -        date: String
+.
+          7, Class SalesRecord:
+                  -  invoice: Invoice
+                  - soldDate: String
+                  -    store: Store
+.
+          8, Class Feedback:
+                  - feedbackId: int
+                  -   customer: Customer (class 4)
+                  -    message: String
+                  -     rating: int
+.
+          9, Class SalesAnalytics:
+                  - topSellingProducts: List<Product>
+                  -         totalSales: double
+                  -        totalProfit: double
+                  -             losses: double
+
+
+
+
+
+
+
+                  
