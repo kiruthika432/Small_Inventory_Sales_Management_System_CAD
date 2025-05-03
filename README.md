@@ -87,7 +87,7 @@ System Design:
           9, Class SalesAnalytics:
                   - topSellingProducts: List<Product>
                   -         totalSales: double
-                  -        totalProfit: double
+                  -        totalProfit: double 
                   -             losses: double
 
 
